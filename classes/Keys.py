@@ -7,7 +7,7 @@ from kivy.core.window import Window
 
 class Keys(Widget):
     map_keys = []
-    base_key = None
+    base_keys = None
     key_size = 9
     current_x_key = 1
     current_y_key = 1
@@ -27,13 +27,13 @@ class Keys(Widget):
         try:
             print("\n\n\n\n'Calculations' Class - 'set_key' Function")
 
-            x_key = self.random_keys()
-            self.map_keys = x_key
+            keys = self.random_keys()
+            self.map_keys = keys
         
-            self.base_key = self.map_keys
+            self.base_keys = keys
 
             print("\n\nadded base keys to main key")
-            print(self.map_keys)
+            print(self.base_keys)
 
         except Exception as e:
             print("\n\nError in 'Calculations' Class - 'set_key' Function", e)
@@ -53,40 +53,40 @@ class Keys(Widget):
         if x == 0 and y == 0:
             print("\n\nnew key")
             print(self.base_key)
-            self.map_keys = self.base_key
+            self.map_keys = self.base_keys
             return True
         
         if x == 0 and y > 0:
-            x = int(str(self.base_key[0])[:1])
+            x = int(str(self.base_keyss[0])[:1])
         
         if x == 0 and y < 0:
-            x = int(str(self.base_key[1])[:1])
+            x = int(str(self.base_keys[1])[:1])
 
         if x > 0 and y == 0:
-            y = int(str(self.base_key[2])[:1])
+            y = int(str(self.base_keys[2])[:1])
 
         if x < 0 and y == 0:
-            y = int(str(self.base_key[3])[:1])   
+            y = int(str(self.base_keys[3])[:1])   
 
         if x + y == 0:
             x = abs(x)
-            y = int(str(self.base_key[4])[:1])    
+            y = int(str(self.base_keys[4])[:1])    
 
-        key = []
+        keys = []
 
         i = 0
-        while len(key) < self.key_size:
-            num = self.base_key[i] * (x + y) * x
+        while len(keys) < self.key_size:
+            num = self.base_keys[i] * (x + y) * x
             new_num = num
             while new_num > self.max_key_value:
                 new_num = new_num - self.max_key_value
             num = abs(new_num)
-            key.append(num)
+            keys.append(num)
             i += 1
 
-        print("\n\nnew key")
-        print(key)
-        self.map_keys = key    
+        print("\n\nnew keys")
+        print(keys)
+        self.map_keys = keys    
 
 
     def test_reverse(self):
@@ -95,38 +95,38 @@ class Keys(Widget):
 
         if x == 0 and y == 0:
             print("\n\nnew key")
-            print(self.base_key[0])
-            self.map_keys = self.base_key[0]
+            print(self.base_keys[0])
+            self.map_keys = self.base_keys
             return True
         
         if x == 0 and y > 0:
-            x = int(str(self.base_key[0])[:1])
+            x = int(str(self.base_keys[0])[:1])
         
         if x == 0 and y < 0:
-            x = int(str(self.base_key[1])[:1])
+            x = int(str(self.base_keys[1])[:1])
 
         if x > 0 and y == 0:
-            y = int(str(self.base_key[2])[:1])
+            y = int(str(self.base_keys[2])[:1])
 
         if x < 0 and y == 0:
-            y = int(str(self.base_key[3])[:1])   
+            y = int(str(self.base_keys[3])[:1])   
 
         if x + y == 0:
             x = abs(x)
-            y = int(str(self.base_key[4])[:1])     
+            y = int(str(self.base_keys[4])[:1])     
         
-        key = []
+        keys = []
 
         i = 0
-        while len(key) < self.key_size:
-            num = abs(self.base_key[i] * (x + y) * y)
+        while len(keys) < self.key_size:
+            num = abs(self.base_keys[i] * (x + y) * y)
             new_num = num
             while new_num > self.max_key_value:
                 new_num = new_num - self.max_key_value
             num = abs(new_num)
-            key.append(num)
+            keys.append(num)
             i += 1
 
-        print("\n\nnew key")
-        print(key)
-        self.map_keys = key
+        print("\n\nnew keys")
+        print(keys)
+        self.map_keys = keys

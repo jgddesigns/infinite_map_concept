@@ -19,7 +19,6 @@ class Draw(Widget):
     def draw_shapes(self):
         self.canvas.clear()
         self.positions = []
-        print(App.get_running_app().main.key.map_keys)
         with self.canvas:
             for key in App.get_running_app().main.key.map_keys:
                 self.get_color(key)  
