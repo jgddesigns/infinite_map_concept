@@ -1,0 +1,35 @@
+#:kivy 1.0.9
+#:import hex kivy.utils.get_color_from_hex
+
+
+<Draw>
+    id: draw
+
+    canvas:
+    
+
+<Keys>
+    id: key_bg
+
+
+<Position>:
+    id: position
+
+
+<Player>:
+    size: 30, 30
+    canvas:
+        Color:
+            rgba: hex('#ffffff')
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+<Main>
+    id: main_map
+
+
+
+
+
