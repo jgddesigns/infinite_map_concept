@@ -5,7 +5,6 @@ from kivy.core.window import Window
 from classes.Main import Main
 
 
-Builder.load_file("main.kv")
 
 class InfiniteMap(App):
     size_multiplier = 1.5
@@ -26,7 +25,6 @@ class InfiniteMap(App):
         self.main = Main()
         self.main.start()
     
-        
         return self.main
     
 
