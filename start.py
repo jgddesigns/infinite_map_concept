@@ -7,28 +7,34 @@ from classes.Main import Main
 
 Builder.load_file("main.kv")
 
+
 class InfiniteMap(App):
-    size_multiplier = 1.5
-    default_width = 800 
-    default_height = 450 * size_multiplier
+    try:
+        print("\n\n\n\n'InfiniteMap' Class - 'build' Function")
 
-    key = None
-    draw = None
-    position = None
-    player = None
+        size_multiplier = 1.5
+        default_width = 800 
+        default_height = 450 * size_multiplier
 
-    main = None
+        key = None
+        draw = None
+        position = None
+        player = None
+
+        main = None
 
 
-    def build(self):
-        Window.size = (self.default_width, self.default_height)
+        def build(self):
+            Window.size = (self.default_width, self.default_height)
 
-        self.main = Main()
-        self.main.start()
-    
+            self.main = Main()
+            self.main.start()
+                  
+            return self.main
         
-        return self.main
-    
+    except Exception as e:
+        print("\n\nError in 'InfiniteMap' Class - 'build' Function", e)   
+
 
 if __name__ == "__main__":
     InfiniteMap().run()
