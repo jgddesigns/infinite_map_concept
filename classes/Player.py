@@ -15,9 +15,14 @@ class Player(Widget):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self.rgba = (1, 1, 1, 1)
 
 
         
 
     def move(self):
-        self.pos = Vector(*self.velocity) + self.pos
+        try:
+            self.pos = Vector(*self.velocity) + self.pos
+
+        except Exception as e:
+            print("\n\nError in 'Player' Class - 'move' Function", e)
