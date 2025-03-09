@@ -11,6 +11,7 @@ class Map(Widget):
     total_x = 0
     total_y = 0
     current_coords = [0, 0]
+    
     bg = ObjectProperty(None)
 
 

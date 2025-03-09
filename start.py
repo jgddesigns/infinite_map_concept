@@ -16,7 +16,6 @@ class InfiniteMap(App):
     draw = None
     position = None
     player = None
-
     main = None
 
 
