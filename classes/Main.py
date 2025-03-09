@@ -19,8 +19,6 @@ class Main(Widget):
     classes = None
     app = None
 
-    player = ObjectProperty(None)
-
 
 
 

@@ -21,6 +21,11 @@ class InfiniteMap(App):
 
 
 
+    Builder.load_file("main.kv")
+
+
+
+
     def build(self):
         try:
             Window.size = (self.default_width, self.default_height)
@@ -32,6 +37,8 @@ class InfiniteMap(App):
         
         except Exception as e:
             print("\n\nError in 'InfiniteMap' Class - 'build' Function", e)   
+
+
 
 
 if __name__ == "__main__":

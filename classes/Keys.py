@@ -55,10 +55,12 @@ class Keys(Widget):
                 return True
             
             if x == 0 and y > 0:
-                x = int(str(self.base_keyss[0])[:1])
+                x = int(str(self.base_keys[0])[:1])
+                y = int(str(self.base_keys[len(self.base_keys)-1])[:1])
             
             if x == 0 and y < 0:
                 x = int(str(self.base_keys[1])[:1])
+                y = int(str(self.base_keys[len(self.base_keys)-2])[:1])
 
             if x > 0 and y == 0:
                 y = int(str(self.base_keys[2])[:1])
@@ -74,7 +76,7 @@ class Keys(Widget):
 
             i = 0
             while len(keys) < self.key_size:
-                num = self.base_keys[i] * (x + y) * x
+                num = self.base_keys[i] * ((10-x-i) + y) * (10-x-i)
                 new_num = num
                 while new_num > self.max_key_value:
                     new_num = new_num - self.max_key_value
@@ -117,7 +119,7 @@ class Keys(Widget):
 
             i = 0
             while len(keys) < self.key_size:
-                num = abs(self.base_keys[i] * (x + y) * y)
+                num = abs(self.base_keys[i] * (x + (10-y-i)) * (10-y-i))
                 new_num = num
                 while new_num > self.max_key_value:
                     new_num = new_num - self.max_key_value
