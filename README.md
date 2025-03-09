@@ -1,5 +1,6 @@
 Infinite map within a finite amount of memory. All locations stay the same. 
 
+Press the directional arrows to move the player sprite. When the sprite reaches the end of the screen, the map changes.
 
 Concepts:
 
