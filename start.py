@@ -5,7 +5,6 @@ from kivy.core.window import Window
 from classes.Main import Main
 
 
-Builder.load_file("main.kv")
 
 
 class InfiniteMap(App):

@@ -1,4 +1,4 @@
-Testing theory of making an infinite map within a finite amount of memory. All locations stay the same. 
+Infinite map within a finite amount of memory. All locations stay the same. 
 
 
 Concepts:
@@ -18,11 +18,11 @@ Concepts:
 
 Notes:
 
-    - Randomization quality can of course be increased further by making more complex math-based algorithms for sprite generation and with a larger range of calculation numbers.
+    - Randomization quality can be increased further by making more complex math-based algorithms for sprite generation.
 
-    - Theorhetically an infinite map is impossible, at least in this sense. Eventually, the calculations would match another map exactly. Even with a large range of calculation values. This may not happen for any user, but it is possible. This idea raises the real-life question of alternate universes existing out there somewhere in space (or time? or elsewhere?).
+    - Theorhetically, an infinite map is impossible, at least in this sense. Eventually, the calculations would match another map exactly. Even with a large range of calculation values. This may not happen for any user, but it is possible. This idea raises the real-life question of alternate universes existing out there somewhere in space (or time? or elsewhere?). I'm not saying this code is how the universe is, but it could share similar concepts.
 
-    - This is only a conceptual demo (as you can probably guess by the basic 2-d sprites and blank background :) ). This type of code can definitely be applied in more complex cases, and provides the building blocks for the logic in other potenitally more advanced algorithms.
+    - This is only a conceptual demo (as you can probably guess by the basic 2-d sprites and blank background :) ). This type of code can definitely be applied in more complex cases, and provides the building blocks for the logic in other, potenitally more advanced algorithms.
 
 
 
